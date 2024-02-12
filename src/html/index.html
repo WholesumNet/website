@@ -1,0 +1,58 @@
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <title>Wholesum; p2p verifiable computing network</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Keywords" content="p2p, verifiable computing, risc0, swarm, decentralized storage, decentralized computing">
+    <meta name="Description" content="Wholesuml p2p verifiable computing network">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="layout">
+        <div class="section_header">
+            <div class="logo">
+                <img src="image/logo.png" style="max-height: 100%; max-width: 100%;" />
+            </div>
+            <div class="main_menu">
+                <a href="https://blog.wholesum.network">Blog</a>
+                <a href="https://docs.wholesum.network">Docs</a>
+            </div>
+        </div>
+        <div class="section_main">
+            <p>
+                <b>Wholesum</b> is a p2p verifiable computing network. It builds on top of <u>Risc0</u>, <u>Swarm</u>, <u>FairOS-dfs</u>, and <u>Libp2p</u> to scale verifiable computing. 
+            </p>
+            <p>
+                The network is compesed of at least 3 types of nodes:<br/>
+                <ul>
+                    <li>"Clients" who need computational resources.</li>
+                    <li>"Servers" that offer their powerful computers in exchange for money along with proofs of honest execution.
+                    </li>
+                    <li>"Verifiers", that verify an execution session given a receipt.
+                </ul>
+                Communications between nodes are routed through p2p relays(nodes) where a message indicates a need(e.g. I need a computer with the following specs by client 0xfoo), a status update, ... . Two modes of messaging are supported: <i>gossips</i> that are broadcast-like(one to all/many) public messages and <i>request-response</i> that are private messages between two nodes.
+            </p>
+            <p>
+                Building in p2p settings demands small payload messaging where the payload of a message points to heavy objects stored somewhere else. In Wholesum, nodes first store sizeable objecs into decentralized storage facilities of Swarm network and FairOS-dfs and then share CIDs with each other.
+            </p>
+            <p>
+                Each execution session(a job) yields a "receipt of honest execution" along with usual outputs and logs. The receipt is then broadcasted to the network for independent verification and based on the results a client decides to wether accept the honesty or not. Once the job is done, server(s) and verifier(s) are paid and the actual results are harvested by the client.
+            </p>
+        </div>
+        <div class="section_footer">
+            <div class="tech_stack">
+                <a href="https://risczero.com">Risc0</a>
+                <a href="https://ethswarm.org">Swarm</a>
+                <a href="https://github.com/fairDataSociety/fairOS-dfs">FairOS-dfs</a>
+            </div>
+            <div class="social">
+                <a href="https://github.com/wholesumnet">Github</a>
+                <a href="https://twitter.com/WholesumNet">Twitter</a>
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>
